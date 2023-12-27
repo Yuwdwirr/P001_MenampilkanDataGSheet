@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Latihan menampilkan data dari google spreadsheet</title>
+</head>
+<body>
+	<h1 class="fs-4 text-center border-bottom">Menampilkan Isi dari Google Spreadsheet</h1>
+	<p>Link spreadsheet kita https://docs.google.com/spreadsheets/d/1Nv3ez-YMnmRZoxJMeSCfwIkwJLGY9CBJ8cNWe_kV8Sc/edit?usp=sharing</p>
+	<div id="targetOutput1"></div>
+	<script>
+		// javascript here
+
+		let url = "https://docs.google.com/spreadsheets/d/1Nv3ez-YMnmRZoxJMeSCfwIkwJLGY9CBJ8cNWe_kV8Sc/gviz/tq?"
+
+		fetch(url)
+		.then(res => res.text())
+		.then(rep => {
+			concole.log(rep);
+		});
+	</script>
+</body>
+</html>
