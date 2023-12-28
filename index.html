@@ -25,11 +25,14 @@
 			console.log(data1);
 			console.log("Menampilkan dalam bentuk JSON");
 			console.log(JSON.parse(data1));
+			renderData(data1)
 
 		});
 
-		function printData(e){
-			document.getElementById("targetOutput1").innerText = "Ini adalah data "+e
+		function renderData(e){
+			let target = document.getElementById("targetOutput1");
+			target.innerHTML = "";
+			target.innerText = e.table.table.rows[0].c[0].v
 		}
 	</script>
 </body>
