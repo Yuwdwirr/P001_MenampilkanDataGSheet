@@ -17,9 +17,19 @@
 
 		fetch(url)
 		.then(res => res.text())
-		.then(rep => {
+		.then(data => {
+			console.log("before");
 			console.log(rep);
+			console.log("get substr and slice");
+			let data1 = rep.substr(47).slice(0,-2);
+			console.log(data1);
+			// console.log(JSON.parse(rep.substr(47).slice(0,-2)));
+
 		});
+
+		function printData(e){
+			document.getElementById("targetOutput1").innerText = "Ini adalah data "+e
+		}
 	</script>
 </body>
 </html>
