@@ -19,9 +19,9 @@
 		.then(res => res.text())
 		.then(data => {
 			console.log("before");
-			console.log(rep);
+			console.log(data);
 			console.log("get substr and slice");
-			let data1 = rep.substr(47).slice(0,-2);
+			let data1 = data.substr(47).slice(0,-2);
 			console.log(data1);
 			// console.log(JSON.parse(rep.substr(47).slice(0,-2)));
 
